@@ -17,12 +17,15 @@
             <tbody>
                 @foreach($messages as $message)
                     <tr>
-                        <th>{{ $message->id }}</th>
+                        <td>{!! link_to_route('messages.show', $message->id, ['message' => $message->id]) !!}</td>
                         <th>{{ $message->content }}</th>
                     </tr>
                 @endforeach
             </tbody>
         </table> 
     @endif
+
+    {{-- メッセージ作成ページへのリンク --}}
+    {!! link_to_route('messages.create', '新規メッセージの投稿',[],['class' => 'btn btn-primary']) !!}
     
 @endsection
