@@ -11,6 +11,10 @@
             <th>{{ $message->id }}</th>
         </tr>
         <tr>
+            <th>タイトル</th>
+            <th>{{ $message->title }}</th>
+        </tr>
+        <tr>
             <th>メッセージ</th>
             <th>{{ $message->content }}</th>
         </tr>
